@@ -1,38 +1,109 @@
-.App {
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #6782aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.main {
+  width: 30vw;
+  min-height: 85vh;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-sizing: border-box;
+}
+.todo-headline {
+  width: 100%;
+  height: 80px;
+  background-color: #876ba9;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.todo-headline .todo-headline-text{
+  padding-top: 20px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  font-family: sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-body{
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 30px 10px 0 10px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.todo-body input{
+  width: 50%;
+  border: none;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  border-bottom: 4px solid #876ba9;
+  margin-right: 20px;
+}
+.todo-body input:focus{
+  border: none;
+  outline: none;
+  border-bottom: 4px solid #876ba9;
+}
+.todo-body-button{
+  padding: 5px 14px;
+  border-radius: 50%;
+  background-color: #876ba9;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bolder;
+  border: none;
+  transition: 0.3s;
+}
+.todo-body-button:hover{
+  background-color: #008000;
+}
+ol{
+  list-style: none;
+}
+ol .todo-body-list-div{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 8px;
+}
+ol .todo-body-list-button{
+  padding: 2px 8px;
+  border-radius: 50%;
+  background-color: #876ba9;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bolder;
+  border: none;
+  margin-right: 5px;
+  transform: rotate(45deg);
+  /* transition: 0.2s; */
+}
+ol .todo-body-list-button:hover{
+  background-color: #DC143C;
+}
+ol li{
+  font-size: 22px;
+  color: #876ba9;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 800px) {
+  .main {
+    width: 80vw;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 90vw;
   }
 }
